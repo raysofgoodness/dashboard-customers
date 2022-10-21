@@ -1,0 +1,17 @@
+@mixin center-container($gutter: 30px,  $brp: $design-width) {
+  max-width: $brp;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @if ($gutter != 0) {
+    padding-left: $gutter * 0.5;
+    padding-right: $gutter * 0.5;
+
+    //Добавляем размер падинга между колонками + скроллбар
+    @include breakpoint($brp + ($gutter) + 16px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
