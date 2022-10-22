@@ -1,0 +1,131 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 28px 76px 28px;
+  flex: 0 0 306px;
+  background-color: $white-color;
+  box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
+  min-height: 100%;
+
+  &__bottom {
+    @include flex-v-center;
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 64px;
+  }
+
+}
+
+.sidebar-list {
+  &__item {
+    @include mb(16px);
+
+    @include flex-v-center;
+
+    position: relative;
+    padding: 10px 14px 10px 10px;
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all ease-in .5s;
+
+    &::before {
+      content: url('../img/chevron-right.svg');
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 12px;
+      right: 6px;
+      transition: all ease-in .2s;
+    }
+
+    @include hover {
+      color: $white-color;
+      background-color: $brand;
+
+      &::before {
+        right: 10px;
+      }
+
+      .sidebar-list__icon {
+        transform: rotate(360deg);
+        transition: all ease-in .5s;
+        path {
+          stroke: $white-color;
+        }
+      }
+
+      .sidebar-list__link {
+        color: $white-color;
+      }
+    }
+
+    &--active {
+      background-color: $brand;
+
+      .sidebar-list__icon {
+        path {
+          stroke: $white-color;
+        }
+      }
+
+      .sidebar-list__link {
+        color: $white-color;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 16px;
+    transition: all ease-in .5s;
+    fill: transparent;
+    &--customers {
+      stroke: $sidebar-text-color;
+      path {
+        stroke: $sidebar-text-color;
+      }
+    }
+  }
+
+  &__link {
+    color: $sidebar-text-color;
+  }
+}
+
+
+// user sidebar styles
+.user {
+  &__icon {
+    margin-right: 12px;
+    width: 42px;
+    height: 42px;
+    border-radius: 99999px;
+    overflow: hidden;
+
+    picture img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__info-name, &__info-position {
+    margin: 0;
+  }
+
+  &__info-name {
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $black-color;
+  }
+
+  &__info-position {
+    font-size: 12px;
+    color: #757575;
+  }
+}

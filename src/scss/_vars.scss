@@ -1,5 +1,24 @@
 // base
-$font-family: 'Open Sans', sans-serif;
-$content-width: 1170px;
+$font-family: 'Poppins', sans-serif;
+$content-width: 1440px;
 $container-offset: 15px;
 $container-width: calc(#{$content-width} + (#{$container-offset * 2}));
+
+// colors
+$black-color: #000;
+$white-color: #fff;
+$brand: #5932EA;
+$active-color: rgba(22, 192, 152, 0.38);
+$active-border-color: #00B087;
+$active-text-color: #008767;
+$inactive-color: #FFC5C5;
+$inactive-border-color: #DF0404;
+$inactive-text-color: $inactive-border-color;
+$label-text-color: #B5B7C0;
+$sidebar-text-color: #9197B3;
+$main-text-color: #292D32;
+$subtitle-text-color: #16C098;
+
+// sizes
+$sidebar-width: 306px;
+$main-content: 100%;
