@@ -33,6 +33,17 @@ a {
   text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li, span, td, tr, th {
+  &::selection {
+    background-color: $brand;
+    color: $white-color;
+  }
+}
 
 .is-hidden {
   display: none !important; /* stylelint-disable-line declaration-no-important */

@@ -3,7 +3,10 @@
 
 // Определение операционной системы на мобильных
 import { mobileCheck } from "./functions/mobile-check";
-console.log(mobileCheck())
+console.log(mobileCheck());
+
+import { filterUsers } from "./functions/filter-users";
+filterUsers();
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
