@@ -14,7 +14,8 @@
     width: 100px;
     top: 0;
     left: 0;
-    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
 
     &--active {
       width: 300px;
@@ -140,6 +141,10 @@
       &::before {
         display: none;
       }
+    }
+
+    @include small-tablet {
+      padding: 10px 12px 10px 4px;
     }
   }
 

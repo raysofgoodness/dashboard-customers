@@ -19,15 +19,22 @@
   }
 
   @include hd {
-    padding: 30px 30px 120px 150px;
+    padding: 30px 30px 120px 130px;
   }
 
+  @include mobile {
+    padding: 20px 10px 60px 110px;
+  }
 
   &__greeting {
     margin-bottom: 51px;
     font-size: 24px;
     font-weight: 500;
     color: $black-color;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__main {
@@ -45,6 +52,18 @@
 
     @include hd {
       padding: 26px 30px 0 26px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 30px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__main-text {
+    @include small-tablet {
+      margin-bottom: 20px;
     }
   }
 
@@ -64,12 +83,24 @@
     @include flex-all-sb;
 
     padding: 0 40px 0 38px;
+
+    @include hd {
+      padding: 0 26px;
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+    }
   }
 
   &__bottom-text {
     font-size: 14px;
     line-height: 21px;
     color: $label-text-color;
+
+    @include small-tablet {
+      margin-bottom: 15px;
+    }
   }
 
 }
@@ -198,7 +229,7 @@
         float: left;
         font-size: 14px;
         line-height: 21px;
-        font-weight: 500;
+        font-weight: 600;
         color: $label-text-color;
       }
     }
@@ -231,6 +262,11 @@
 // pagination
 .pagination {
   @include flex-v-center;
+
+  @include small-tablet {
+    flex-wrap: wrap;
+    margin: -5px;
+  }
 
   &__item {
     @include flex-all-center;
@@ -279,6 +315,10 @@
           color: #404b52;
         }
       }
+    }
+
+    @include small-tablet {
+      margin: 5px;
     }
   }
 
