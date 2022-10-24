@@ -16,6 +16,7 @@
     left: 0;
     max-height: 100%;
     overflow-y: auto;
+    z-index: 1000;
 
     &--active {
       width: 300px;
